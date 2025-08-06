@@ -46,7 +46,7 @@ export default function App() {
     if (!tweetText.trim()) return
     const newTweet = {
       handle: '@You',
-      profilePic: '/images/frenki.jpg',
+      profilePic: '/public/images/frenki.jpg',
       likes: 0,
       retweets: 0,
       tweetText: tweetText.trim(),
