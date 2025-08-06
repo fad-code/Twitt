@@ -46,7 +46,6 @@ export default function App() {
     if (!tweetText.trim()) return
     const newTweet = {
       handle: '@You',
-      // ✅ Use the public/ directory’s root path:
       profilePic: '/images/frenki.jpg',
       likes: 0,
       retweets: 0,
