@@ -46,7 +46,8 @@ export default function App() {
     if (!tweetText.trim()) return
     const newTweet = {
       handle: '@You',
-      profilePic: '/public/images/frenki.jpg',
+      // ✅ Use the public/ directory’s root path:
+      profilePic: '/images/frenki.jpg',
       likes: 0,
       retweets: 0,
       tweetText: tweetText.trim(),
@@ -150,7 +151,9 @@ export default function App() {
                     className="flex items-start space-x-3"
                   >
                     <img
-                      src={reply.profilePic}
+                      src={reply.profilePic.startsWith('/') 
+                        ? reply.profilePic 
+                        : `/${reply.profilePic}`}
                       alt="Reply"
                       className="w-8 h-8 rounded-full"
                     />
